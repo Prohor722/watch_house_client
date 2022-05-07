@@ -29,7 +29,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className='mt-3'>This Website is Developed by Prohor Banik ©2025</p>
+            <p className='mt-5'>This Website is Developed by Prohor Banik ©2025</p>
         </div>
     );
 };

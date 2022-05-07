@@ -5,7 +5,6 @@ import './SocialLogin.css'
 const SocialLogin = () => {
     return (
         <div>
-            <p>Or, sign in using google account.</p>
             <button className='social-btn py-2 px-5 rounded'>
                 <img src={GoogleImage} alt="google logo"/>
             </button>
