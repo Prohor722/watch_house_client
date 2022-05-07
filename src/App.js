@@ -10,6 +10,7 @@ import ManageInventories from './components/ManageInventories/ManageInventories'
 import MyItems from './components/Myitems/Myitems'
 import NotFound from './components/NotFound/NotFound';
 import Loading from './components/Shared/Loading';
+import Footer from './components/Shared/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/loading" element={<Loading/>}></Route>
         <Route path="*" element={<NotFound/>}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }

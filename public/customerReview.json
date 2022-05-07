@@ -2,6 +2,63 @@
     {
         "name": "Albert John",
         "rating": 4.5,
-        "review" : "I am a regular client from watch house and more than satisfied."
+        "review" : "I am a regular client from watch house and more than satisfied. Even i will say you can trust blindly.",
+        "img": "https://i.ibb.co/p4RmzVQ/luis-villasmil-hh3-Vi-D0r0-Rc-unsplash.jpg"
     },
+    {
+        "name": "Lily Las",
+        "rating": 5,
+        "review" : "I have more then 3years experience with this company and i can suggest to anyone without any doubts.",
+        "img": "https://i.ibb.co/WDzsLdr/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg"
+    },
+    {
+        "name": "Ron Lasly",
+        "rating": 4.8,
+        "review" : "I am using there service science 2007 and still loved to work with them.",
+        "img": "https://i.ibb.co/xD2JZnF/midas-hofstra-a6-PMA5-JEm-WE-unsplash.jpg"
+    },
+    {
+        "name": "Mark Jen Rosserio",
+        "rating": 4.5,
+        "review" : "I am a new customer of there service but the service and support I am getting is mind blowing.",
+        "img": "https://i.ibb.co/L5KyhFj/timi-david-3-MMLYJQy-Emk-unsplash.jpg"
+    },
+    {
+        "name": "John Leo",
+        "rating": 4.7,
+        "review" : "Working with them is just a fantastic experience.",
+        "img": "https://i.ibb.co/p4RmzVQ/luis-villasmil-hh3-Vi-D0r0-Rc-unsplash.jpg"
+    },
+    {
+        "name": "Ben Who",
+        "rating": 4.1,
+        "review" : "Its a good company to trust on, I have a experience of more then 7years with them.",
+        "img": "https://i.ibb.co/mHRSyy8/alexander-hipp-i-EEBWg-Y-6l-A-unsplash.jpg"
+    },
+    {
+        "name": "Nick Gems",
+        "rating": 3.5,
+        "review" : "My experience is not mush good like others , my be I on a rural place thats the reason.",
+        "img": "https://i.ibb.co/TPHYs0j/alex-suprun-b-YODy-Sp-LIh-E-unsplash.jpg"
+    },
+    {
+        "name": "Ben Who",
+        "rating": 4.1,
+        "review" : "Its a good company to trust on, I have a experience of more then 7years with them.",
+        "img": "https://i.ibb.co/6168Rfx/alex-suprun-ZHv-M3-XIOHo-E-unsplash.jpg"
+    }
 ]
+
+
+
+
+
+
+
+
+// https://i.ibb.co/3srpct5/cesar-rincon-XHVp-Wcr5gr-Q-unsplash.jpg
+// https://i.ibb.co/Gt8JS4M/christian-buehner-DIt-Ylc26z-VI-unsplash.jpg
+// https://i.ibb.co/ynCdpvL/james-timothy-Kh3a-TWw-MH1-I-unsplash.jpg
+// https://i.ibb.co/sy9Gx7g/julian-wan-2-Ed-IX-O2lk-I-unsplash.jpg
+// https://i.ibb.co/hYL2DBv/julian-wan-WNo-Ln-Jo7t-S8-unsplash.jpg
+// https://i.ibb.co/Yh8fgnF/leio-mclaren-L2d-Tmh-Qzx4-Q-unsplash.jpg

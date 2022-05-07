@@ -5,6 +5,7 @@ import Product from '../Product/Product';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Review from '../Review/Review';
 
 const Home = () => {
 
@@ -70,6 +71,27 @@ const Home = () => {
             "supplierName":"Amazon Sells"
         }
     ];
+
+    const reviews = [
+        {
+            "name": "Albert John",
+            "rating": 4.5,
+            "review" : "I am a regular client from watch house and more than satisfied. Even i will say you can trust blindly.",
+            "img": "https://i.ibb.co/p4RmzVQ/luis-villasmil-hh3-Vi-D0r0-Rc-unsplash.jpg"
+        },
+        {
+            "name": "Lily Las",
+            "rating": 5,
+            "review" : "I have more then 3years experience with this company and i can suggest to anyone without any doubts.",
+            "img": "https://i.ibb.co/WDzsLdr/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg"
+        },
+        {
+            "name": "Ron Lasly",
+            "rating": 4.8,
+            "review" : "I am using there service science 2007 and still loved to work with them.",
+            "img": "https://i.ibb.co/xD2JZnF/midas-hofstra-a6-PMA5-JEm-WE-unsplash.jpg"
+        }
+    ];
     
     return (
         <div>
@@ -87,7 +109,7 @@ const Home = () => {
 
             {/* Inventory Section  */}
             <div className='inventory-section my-5'>
-                <div className="inventory-title mb-3">
+                <div className="inventory-title mb-5">
                     <div className='line m-auto'></div>
                     <h1 className='m-auto'>Our Inventory</h1>
                     <div className='line my-auto'></div>
@@ -96,6 +118,24 @@ const Home = () => {
                 <div className='row row-cols-md-4 g-0 d-flex justify-content-center'>
                     {products.map(product=>
                     <Product product={product}></Product>)
+                    }
+                </div>
+                <div className='see-all mt-3'>
+                    <Link to='/blog'>See All</Link>
+                    <FontAwesomeIcon icon={faArrowRight} className="ms-1"/>
+                </div>
+            </div>
+            
+            {/* Customer Review  */}
+            <div className='review-section my-5'>
+                <div className="inventory-title mb-3">
+                    <div className='line m-auto'></div>
+                    <h1 className='m-auto'>Customer Review</h1>
+                    <div className='line my-auto'></div>
+                </div>
+
+                <div className='row row-cols-md-4 g-0 d-flex justify-content-center mt-2 mb-5'>
+                    {reviews.map(review=><Review userReview={review}></Review>)
                     }
                 </div>
                 <div className='see-all mt-2'>
