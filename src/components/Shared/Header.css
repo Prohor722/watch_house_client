@@ -1,0 +1,10 @@
+.logo{
+    height: 50px;
+}
+a{
+    font-weight: 600;
+}
+
+a:hover{
+    color: rgba(66, 18, 196, 0.897) !important;
+}

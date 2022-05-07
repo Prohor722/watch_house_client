@@ -1,0 +1,72 @@
+[
+    {
+        "name":"Louis Mornaud ST02",
+        "category":"Sports Watch",
+        "description":"Sporty looking watch for tracking or sporty look.",
+        "belt":"Gray Cotton",
+        "img":"https://i.ibb.co/KrXhPK3/louis-mornaud-2-ANGTzt4-VDY-unsplash.jpg",
+        "price": 250,
+        "quantity": 10,
+        "supplier-name":"Louis Mornaud America"
+    },
+    {
+        "name":"Louis Mornaud CS03",
+        "category":"Casual Watch",
+        "description":"Casual Watch for regular life, party.",
+        "belt":"Orange Silicon",
+        "img":"https://i.ibb.co/JqJK3QN/louis-mornaud-7-ZG3-Yj5-AML0-unsplash.jpg",
+        "price": 150,
+        "quantity": 5,
+        "supplier-name":"Louis Mornaud America"
+    },
+    {
+        "name":"Louis Mornaud Classic-07",
+        "category":"Semi Formal Watch",
+        "description":"Semi formal, good for all programs.",
+        "belt": "Black Lather", 
+        "img":"https://i.ibb.co/j63Jnn3/louis-mornaud-Tk7m-Hx-JUA6-I-unsplash.jpg",
+        "price": 320,
+        "quantity": 12,
+        "supplier-name":"Louis Mornaud America"
+    },
+    {
+        "name":"Oliur Ocla-202",
+        "category":"Semi Formal",
+        "description":"Semi formal, good for all programs, occasions.",
+        "belt":"Black Lather",
+        "img":"https://i.ibb.co/HV42d9k/oliur-u-Zl3-HF0o-Sik-unsplash.jpg",
+        "price":180,
+        "quantity": 17,
+        "supplier-name":"Oliur France"
+    },
+    {
+        "name":"Oris M-024",
+        "category":"Casual Watch",
+        "description":"Perfect man wear for mature look.",
+        "belt":"Brown Lather",
+        "img":"https://i.ibb.co/dBBrD9V/roy-p-Un85-W2-YXPKg-unsplash.jpg",
+        "price":350,
+        "quantity":25,
+        "supplier-name":"Oris Germany"
+    },
+    {
+        "name":"JTOVA J-54",
+        "category":"Leather Watch",
+        "description":"Black belt formal watch for any formal occasion.",
+        "belt":"Black Lather",
+        "img":"https://i.ibb.co/8PLFrWV/joerg-fielenbach-QB0p3-Dnq37-E-unsplash.jpg",
+        "price": 120,
+        "quantity": 25,
+        "supplier-name":"Amazon Sells"
+    },
+    {
+        "name":"Sprit SL-704",
+        "category":"Luxury Watch",
+        "description":"Silver luxury watch with stones. ",
+        "belt":"Silver Steel",
+        "img":"https://i.ibb.co/Q9g2qCb/djordje-jovicic-l1m-VJn-G7a84-unsplash.jpg",
+        "price":500,
+        "quantity":3,
+        "supplier-name":"Sprit Italy"
+    }
+]
