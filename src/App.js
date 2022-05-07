@@ -8,6 +8,8 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login'
 import ManageInventories from './components/ManageInventories/ManageInventories'
 import MyItems from './components/Myitems/Myitems'
+import NotFound from './components/NotFound/NotFound';
+import Loading from './components/Shared/Loading';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/myItems" element={<MyItems/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
+        <Route path="/loading" element={<Loading/>}></Route>
+        <Route path="*" element={<NotFound/>}></Route>
       </Routes>
     </div>
   );
