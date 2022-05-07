@@ -15,7 +15,9 @@
     display: grid;
     grid-template-columns:  repeat(3, 1fr);
 }
-.see-all{
+.see-all>a{
+    /* background-color: blue; */
     text-decoration: none !important;
-    color: aqua;
+    color: rgb(43, 43, 43);
+    margin-left: 70%;
 }

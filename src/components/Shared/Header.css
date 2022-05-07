@@ -4,7 +4,6 @@
 a{
     font-weight: 600;
 }
-
-a:hover{
-    color: red !important;
+.nav-link:hover{
+    color: rgb(20, 20, 20) !important;
 }

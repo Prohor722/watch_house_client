@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../../images/banner.png'
 import Product from '../Product/Product';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Home.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = () => {
 
@@ -96,8 +98,10 @@ const Home = () => {
                     <Product product={product}></Product>)
                     }
                 </div>
-
-                <Link to='/' className='sell-all'>See All</Link>
+                <div className='see-all mt-2'>
+                    <Link to='/blog'>See All</Link>
+                    <FontAwesomeIcon icon={faArrowRight} className="ms-1"/>
+                </div>
             </div>
         </div>
     );
