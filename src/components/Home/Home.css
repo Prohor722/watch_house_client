@@ -15,9 +15,12 @@
     display: grid;
     grid-template-columns:  repeat(3, 1fr);
 }
-.see-all>a{
+.link{
     /* background-color: blue; */
     text-decoration: none !important;
-    color: rgb(43, 43, 43);
+    color: rgba(63, 63, 63, 0.767);
     margin-left: 70%;
+}
+.link:hover{
+    color:black;
 }

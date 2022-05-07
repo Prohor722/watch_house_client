@@ -115,19 +115,19 @@ const Home = () => {
                     <div className='line my-auto'></div>
                 </div>
 
-                <div className='row row-cols-md-4 g-0 d-flex justify-content-center'>
+                <div className='row row-cols-lg-4 row-cols-md-3 g-0 d-flex justify-content-center'>
                     {products.map(product=>
                     <Product product={product}></Product>)
                     }
                 </div>
-                <div className='see-all mt-3'>
-                    <Link to='/blog'>See All</Link>
+                <div className='mt-3'>
+                    <Link to='/blog' className='link'>See All</Link>
                     <FontAwesomeIcon icon={faArrowRight} className="ms-1"/>
                 </div>
             </div>
             
             {/* Customer Review  */}
-            <div className='review-section my-5'>
+            <div className='review-section mt-5'>
                 <div className="inventory-title mb-3">
                     <div className='line m-auto'></div>
                     <h1 className='m-auto'>Customer Review</h1>
@@ -138,8 +138,8 @@ const Home = () => {
                     {reviews.map(review=><Review userReview={review}></Review>)
                     }
                 </div>
-                <div className='see-all mt-2'>
-                    <Link to='/blog'>See All</Link>
+                <div className='mt-2'>
+                    <Link to='/blog' className='link'>See All</Link>
                     <FontAwesomeIcon icon={faArrowRight} className="ms-1"/>
                 </div>
             </div>
