@@ -7,27 +7,27 @@
         "img":"https://i.ibb.co/KrXhPK3/louis-mornaud-2-ANGTzt4-VDY-unsplash.jpg",
         "price": 250,
         "quantity": 10,
-        "supplier-name":"Louis Mornaud America"
+        "supplierName":"Louis Mornaud America"
     },
     {
         "name":"Louis Mornaud CS03",
         "category":"Casual Watch",
-        "description":"Casual Watch for regular life, party.",
+        "description":"Casual Watch for regular life for teens, party.",
         "belt":"Orange Silicon",
         "img":"https://i.ibb.co/JqJK3QN/louis-mornaud-7-ZG3-Yj5-AML0-unsplash.jpg",
         "price": 150,
         "quantity": 5,
-        "supplier-name":"Louis Mornaud America"
+        "supplierName":"Louis Mornaud America"
     },
     {
         "name":"Louis Mornaud Classic-07",
         "category":"Semi Formal Watch",
-        "description":"Semi formal, good for all programs.",
+        "description":"Semi formal, good for all programs. Gives a classic look to a man",
         "belt": "Black Lather", 
         "img":"https://i.ibb.co/j63Jnn3/louis-mornaud-Tk7m-Hx-JUA6-I-unsplash.jpg",
         "price": 320,
         "quantity": 12,
-        "supplier-name":"Louis Mornaud America"
+        "supplierName":"Louis Mornaud America"
     },
     {
         "name":"Oliur Ocla-202",
@@ -37,17 +37,17 @@
         "img":"https://i.ibb.co/HV42d9k/oliur-u-Zl3-HF0o-Sik-unsplash.jpg",
         "price":180,
         "quantity": 17,
-        "supplier-name":"Oliur France"
+        "supplierName":"Oliur France"
     },
     {
         "name":"Oris M-024",
         "category":"Casual Watch",
-        "description":"Perfect man wear for mature look.",
+        "description":"Perfect man wear for mature look, also a good choice in semi formal.",
         "belt":"Brown Lather",
         "img":"https://i.ibb.co/dBBrD9V/roy-p-Un85-W2-YXPKg-unsplash.jpg",
         "price":350,
         "quantity":25,
-        "supplier-name":"Oris Germany"
+        "supplierName":"Oris Germany"
     },
     {
         "name":"JTOVA J-54",
@@ -57,7 +57,7 @@
         "img":"https://i.ibb.co/8PLFrWV/joerg-fielenbach-QB0p3-Dnq37-E-unsplash.jpg",
         "price": 120,
         "quantity": 25,
-        "supplier-name":"Amazon Sells"
+        "supplierName":"Amazon Sells"
     },
     {
         "name":"Sprit SL-704",

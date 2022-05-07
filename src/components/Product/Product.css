@@ -1,0 +1,9 @@
+.product:hover{
+    box-shadow: 0px 0px 10px gray !important;
+}
+
+.update-btn:hover{
+    background-color: rgba(255, 255, 255, 0.849) !important;
+    border: 1px solid rgba(32, 32, 32, 0.829) !important;
+    color: black;
+}

@@ -6,5 +6,5 @@ a{
 }
 
 a:hover{
-    color: rgba(66, 18, 196, 0.897) !important;
+    color: red !important;
 }

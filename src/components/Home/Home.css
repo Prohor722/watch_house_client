@@ -1,0 +1,21 @@
+/* banner section  */
+.banner-text{
+    font-size: 80px;
+}
+.banner-img{
+    max-height: 600px;
+}
+
+/* inventory section  */
+.line{
+    border: 1px solid rgba(128, 128, 128, 0.493);
+    width: 100%;
+}
+.inventory-title{
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+}
+.see-all{
+    text-decoration: none !important;
+    color: aqua;
+}
