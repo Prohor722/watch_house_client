@@ -42,7 +42,7 @@ const AddProduct = () => {
     });
 
     if (product.name) {
-      const url = "http://localhost:5000/product";
+      const url = "https://fathomless-dawn-99199.herokuapp.com/product";
       fetch(url, {
         method: "POST",
         headers: {

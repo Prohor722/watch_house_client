@@ -13,7 +13,7 @@ const Myitems = () => {
     const navigate = useNavigate();
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/products/?email=${user.email}`)
+        fetch(`https://fathomless-dawn-99199.herokuapp.com/products/?email=${user.email}`)
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[user])    
@@ -32,7 +32,7 @@ const Myitems = () => {
     const productDelete = (id) =>{
       const proceed = window.confirm("Are you sure?");
         if(proceed){
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://fathomless-dawn-99199.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

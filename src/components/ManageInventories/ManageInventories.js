@@ -10,7 +10,11 @@ const ManageInventories = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://fathomless-dawn-99199.herokuapp.com/products",{
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+      }
+    })
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -20,10 +24,10 @@ const ManageInventories = () => {
   }
 
   const productDelete = (id) =>{
-    
+
         const proceed = window.confirm("Are you sure?");
         if(proceed){
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://fathomless-dawn-99199.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

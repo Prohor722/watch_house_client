@@ -6,8 +6,10 @@ import Loading from '../Shared/Loading';
 import SocialLogin from '../Shared/SocialLogin';
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+
+    //dont know why but state states are causing errors
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
     const navigate = useNavigate();
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
@@ -19,12 +21,27 @@ const Login = () => {
         navigate('/');
     }
 
-    const handleLogin = (e) =>{
+    const handleLogin = e =>{
         e.preventDefault();
-        setEmail(e.target.email.value);
-        setPassword(e.target.password.value);
+        // setEmail(e.target.email.value);
+        const mail = e.target.email.value;
+        // setPassword(e.target.password.value);
+        const pass = e.target.password.value;
 
-        signInWithEmailAndPassword(email,password);
+        console.log(mail,pass)
+        signInWithEmailAndPassword(mail,pass);
+        // const url ="https://fathomless-dawn-99199.herokuapp.com/login"
+        // fetch(url,{
+        //     method: "POST",
+        //     headers: {
+        //         'content-type': "application/json"
+        //     },
+        //     body: JSON.stringify({email: mail})
+        // })
+        // .then(res=>res.json())
+        // .then(data=>{
+        //     localStorage.setItem("accessToken:", data.token);
+        // })
         
         if(error){
             setErrorMsg(error.message);

@@ -6,19 +6,64 @@ import './ProductDetails.css'
 const ProductDetails = () => {
     const { id } = useParams();
     const [product, setProduct] = useState({});
+    const [qunt, setQuant] = useState(0);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://fathomless-dawn-99199.herokuapp.com/product/${id}`)
         .then(res=>res.json())
         .then(data=>{
             setProduct(data);
         })
-    },[]);
+    },[qunt]);
 
     const quantityUpdate = e =>{
         e.preventDefault();
-        const qunatity = e.target.quantity.value;
+        const addedQuantity = parseInt(e.target.quantity.value);
+        if(addedQuantity<1 || !addedQuantity){
+            return;
+        }
+        const quantity = parseInt(product.quantity)+addedQuantity;
+
+        const url =`https://fathomless-dawn-99199.herokuapp.com/product/${id}`;
+        fetch(url,{
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ quantity })
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            const newProductData = product;
+            newProductData.quantity = quantity;
+            setProduct(newProductData);
+            setQuant(quantity);
+        })
         
+    }
+
+    const deliveredProduct = (e) =>{
+        e.preventDefault();
+        const quantity = parseInt(product.quantity)-1;
+        if(quantity<1){
+            return;
+        }
+        
+        const url =`https://fathomless-dawn-99199.herokuapp.com/product/${id}`;
+        fetch(url,{
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ quantity })
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            const newProductData = product;
+            newProductData.quantity = quantity;
+            setProduct(newProductData);
+            setQuant(quantity);
+        })
         
     }
 
@@ -43,7 +88,7 @@ const ProductDetails = () => {
                             <input type="number" name="quantity" className="quantity-input"/>
                             <button className='btn btn-dark'>Add Quantity</button>
                             </form>
-                        <button className='btn btn-secondary ms-3 my-2'>Deliver</button>
+                        <button onClick={deliveredProduct} className='btn btn-secondary ms-3 my-2'>Delivered</button>
                     </div>
                 </div>
             </div>

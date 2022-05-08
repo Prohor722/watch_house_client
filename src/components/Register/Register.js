@@ -26,6 +26,7 @@ const Register = () => {
         const email =e.target.email.value;
         const password =e.target.password.value;
         const cpass =e.target.cpass.value;
+        createUserWithEmailAndPassword(email,password);
         // setEmail(em);
         // console.log(em);
         // console.log(ps);
@@ -58,7 +59,8 @@ const Register = () => {
             console.log(errorMsg);
             return;
         }
-        createUserWithEmailAndPassword(email,password);
+
+        // createUserWithEmailAndPassword(email,password);
         console.log(email,password);
 
         if(error){
