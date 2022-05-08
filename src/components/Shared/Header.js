@@ -24,8 +24,10 @@ const Header = () => {
           </Nav>
           <Nav>
           <LinkContainer to="/blog"><Nav.Link className="nav-link">Blog</Nav.Link></LinkContainer>
+          <LinkContainer to="/review"><Nav.Link className="nav-link">Review</Nav.Link></LinkContainer>
           {user? <>
             <LinkContainer to="/manageInventories"><Nav.Link className="nav-link">Manage Inventory</Nav.Link></LinkContainer>
+            <LinkContainer to="/addProduct"><Nav.Link className="nav-link">Add Item</Nav.Link></LinkContainer>
             <LinkContainer to="/myItems"><Nav.Link className="nav-link">My Items</Nav.Link></LinkContainer>
             <Nav.Link className="nav-link" onClick={()=>signOut(auth)}>Log out</Nav.Link>
           </> 
