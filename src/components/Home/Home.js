@@ -9,12 +9,20 @@ import Review from '../Review/Review';
 
 const Home = () => {
     const [products, setProducts] = useState([]);
+    const [reviews , setReviews] = useState([]);
     const numberOfProducts = 6;
+    const numberOfReviews = 3;
 
     useEffect(()=>{
         fetch(`http://localhost:5000/products?size=${numberOfProducts}`)
         .then(res=>res.json())
         .then(data=>setProducts(data))
+    },[]);
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/products?size=${numberOfReviews}`)
+        .then(res=>res.json())
+        .then(data=>setReviews(data))
     },[]);
 
     // const products = [
@@ -80,26 +88,26 @@ const Home = () => {
     //     }
     // ];
 
-    const reviews = [
-        {
-            "name": "Albert John",
-            "rating": 4.5,
-            "review" : "I am a regular client from watch house and more than satisfied. Even i will say you can trust blindly.",
-            "img": "https://i.ibb.co/p4RmzVQ/luis-villasmil-hh3-Vi-D0r0-Rc-unsplash.jpg"
-        },
-        {
-            "name": "Lily Las",
-            "rating": 5,
-            "review" : "I have more then 3years experience with this company and i can suggest to anyone without any doubts.",
-            "img": "https://i.ibb.co/WDzsLdr/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg"
-        },
-        {
-            "name": "Ron Lasly",
-            "rating": 4.8,
-            "review" : "I am using there service science 2007 and still loved to work with them.",
-            "img": "https://i.ibb.co/xD2JZnF/midas-hofstra-a6-PMA5-JEm-WE-unsplash.jpg"
-        }
-    ];
+    // const reviews = [
+    //     {
+    //         "name": "Albert John",
+    //         "rating": 4.5,
+    //         "review" : "I am a regular client from watch house and more than satisfied. Even i will say you can trust blindly.",
+    //         "img": "https://i.ibb.co/p4RmzVQ/luis-villasmil-hh3-Vi-D0r0-Rc-unsplash.jpg"
+    //     },
+    //     {
+    //         "name": "Lily Las",
+    //         "rating": 5,
+    //         "review" : "I have more then 3years experience with this company and i can suggest to anyone without any doubts.",
+    //         "img": "https://i.ibb.co/WDzsLdr/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg"
+    //     },
+    //     {
+    //         "name": "Ron Lasly",
+    //         "rating": 4.8,
+    //         "review" : "I am using there service science 2007 and still loved to work with them.",
+    //         "img": "https://i.ibb.co/xD2JZnF/midas-hofstra-a6-PMA5-JEm-WE-unsplash.jpg"
+    //     }
+    // ];
     
     return (
         <div>
@@ -143,7 +151,7 @@ const Home = () => {
                 </div>
 
                 <div className='row row-cols-md-4 g-0 d-flex justify-content-center mt-2 mb-5'>
-                    {reviews.map(review=><Review userReview={review}></Review>)
+                    {reviews.map(review=><Review key={review._id} userReview={review}></Review>)
                     }
                 </div>
                 <div className='mt-2'>
