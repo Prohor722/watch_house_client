@@ -13,6 +13,7 @@ import Footer from './components/Shared/Footer';
 import ResetPassword from './components/ResetPassword/ResetPassword';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import AddProduct from './components/AddProduct/AddProduct';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
         <Route path="/addProduct" element={
           <RequireAuth>
             <AddProduct/>
+          </RequireAuth>
+        }></Route>
+        <Route path="/product/:id" element={
+          <RequireAuth>
+            <ProductDetails/>
           </RequireAuth>
         }></Route>
         <Route path="/login" element={<Login/>}></Route>
