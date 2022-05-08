@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import Banner from '../../images/banner.png'
 import Product from '../Product/Product';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import './Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Home.css'
 import Review from '../Review/Review';
 
 const Home = () => {

@@ -9,8 +9,10 @@ import Login from './components/Login/Login'
 import ManageInventories from './components/ManageInventories/ManageInventories'
 import MyItems from './components/Myitems/Myitems'
 import NotFound from './components/NotFound/NotFound';
-import Loading from './components/Shared/Loading';
 import Footer from './components/Shared/Footer';
+import ResetPassword from './components/ResetPassword/ResetPassword';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import AddProduct from './components/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -19,11 +21,24 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/blog" element={<Blog/>}></Route>
-        <Route path="/manageInventories" element={<ManageInventories/>}></Route>
-        <Route path="/myItems" element={<MyItems/>}></Route>
+        <Route path="/manageInventories" element={
+          <RequireAuth>
+            <ManageInventories/>
+          </RequireAuth>
+        }></Route>
+        <Route path="/myItems" element={
+          <RequireAuth>
+            <MyItems/>
+          </RequireAuth>
+        }></Route>
+        <Route path="/addProduct" element={
+          <RequireAuth>
+            <AddProduct/>
+          </RequireAuth>
+        }></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
-        <Route path="/loading" element={<Loading/>}></Route>
+        <Route path="/resetPassword" element={<ResetPassword/>}></Route>
         <Route path="*" element={<NotFound/>}></Route>
       </Routes>
       <Footer/>
