@@ -20,7 +20,7 @@ const Home = () => {
     },[]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/products?size=${numberOfReviews}`)
+        fetch(`http://localhost:5000/reviews?size=${numberOfReviews}`)
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[]);

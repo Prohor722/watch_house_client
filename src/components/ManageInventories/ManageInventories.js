@@ -20,7 +20,20 @@ const ManageInventories = () => {
   }
 
   const productDelete = (id) =>{
-      console.log("product :"+id);
+    
+        const proceed = window.confirm("Are you sure?");
+        if(proceed){
+            const url = `http://localhost:5000/product/${id}`;
+            fetch(url, {
+                method: "DELETE"
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data);
+                const remaning = products.filter(product=>id!==product._id);
+                setProducts(remaning);
+            })
+        }
   }
 
   return (

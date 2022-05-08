@@ -15,7 +15,7 @@ const firebaseConfig = {
   messagingSenderId: "922525030577",
   appId: "1:922525030577:web:10e9f5e5b6a8f68913aa90",
   measurementId: "G-7B6QH44D3Y"
-
+  
   // apiKey:process.env.REACT_API_KEY,
   // authDomain:process.env.REACT_AUTH_DOMAIN,
   // projectId:process.env.REACT_PROJECT_ID,

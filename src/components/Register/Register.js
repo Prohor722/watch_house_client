@@ -6,10 +6,10 @@ import Loading from '../Shared/Loading';
 import SocialLogin from '../Shared/SocialLogin';
 
 const Register = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
     const [errorMsg, setErrorMsg] = useState({});
-    const [cpass, setCPass] = useState('');
+    // const [cpass, setCPass] = useState('');
     const navigate = useNavigate();
     const [createUserWithEmailAndPassword,user, loading, error,] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: "true"});
 
@@ -17,15 +17,21 @@ const Register = () => {
         return <Loading/>
     }
     if(user){
-        navigate('/login');
+        navigate('/');
     }
 
     const handleRegister = (e)=>{
         e.preventDefault();
         setErrorMsg({});
-        setEmail(e.target.email.value);
-        setPassword(e.target.password.value);
-        setCPass(e.target.cpass.value);
+        const email =e.target.email.value;
+        const password =e.target.password.value;
+        const cpass =e.target.cpass.value;
+        // setEmail(em);
+        // console.log(em);
+        // console.log(ps);
+        // setPassword(e.target.password.value);
+        // console.log(password);
+        // setCPass(e.target.cpass.value);
 
         const name = e.target.name.value;
         const allError = {};
@@ -53,6 +59,7 @@ const Register = () => {
             return;
         }
         createUserWithEmailAndPassword(email,password);
+        console.log(email,password);
 
         if(error){
             const firebaseError = error.message;
@@ -83,7 +90,7 @@ const Register = () => {
                         <input type="password" name="cpass" className="form-control" placeholder='Confirm Your Password' required/>
                     </div>
 
-                    <button type="submit" className="btn btn-dark">Register</button>
+                    <input type="submit" className="btn btn-dark" value="Register"/>
                 </form>
                 <p>Or, sign up using google account.</p>
                 <SocialLogin/>
