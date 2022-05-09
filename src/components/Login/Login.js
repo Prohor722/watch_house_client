@@ -30,7 +30,6 @@ const Login = () => {
         // setPassword(e.target.password.value);
         const pass = e.target.password.value;
 
-        console.log(mail,pass)
         signInWithEmailAndPassword(mail,pass);
         // const url ="https://fathomless-dawn-99199.herokuapp.com/login"
         // fetch(url,{
