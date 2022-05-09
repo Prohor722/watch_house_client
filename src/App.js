@@ -15,6 +15,7 @@ import RequireAuth from './components/RequireAuth/RequireAuth';
 import AddProduct from './components/AddProduct/AddProduct';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import CustomerReview from './components/CustomerReview/CustomerReview';
+import Loading from './components/Shared/Loading';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/resetPassword" element={<ResetPassword/>}></Route>
+        <Route path="/loading" element={<Loading/>}></Route>
         <Route path="*" element={<NotFound/>}></Route>
       </Routes>
       <Footer/>

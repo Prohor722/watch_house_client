@@ -16,6 +16,8 @@ const ProductDetails = () => {
         })
     },[qunt]);
 
+    if( !product._id ){ return <Loading/>}
+
     const quantityUpdate = e =>{
         e.preventDefault();
         const addedQuantity = parseInt(e.target.quantity.value);

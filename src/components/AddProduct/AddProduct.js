@@ -29,7 +29,7 @@ const AddProduct = () => {
     const email = user.email;
     console.log(product);
 
-    setProduct({
+    const newProduct ={
       name,
       category,
       belt,
@@ -39,8 +39,10 @@ const AddProduct = () => {
       quantity,
       supplierName: supplier,
       email,
-    });
+    };
+    setProduct(newProduct);
 
+    console.log(product);
     if (product.name) {
       const url = "https://fathomless-dawn-99199.herokuapp.com/product";
       fetch(url, {
@@ -48,7 +50,7 @@ const AddProduct = () => {
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(product),
+        body: JSON.stringify(newProduct),
       })
         .then((res) => res.json())
         .then((data) => {

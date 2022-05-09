@@ -21,6 +21,10 @@ const Myitems = () => {
     if(loading){
         return <Loading/>;
     }
+    if(!products.length){ 
+      return <Loading/>
+    }
+    
     if(error){
         console.log(error.message);
     }

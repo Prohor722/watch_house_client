@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Review from '../Review/Review';
+import Loading from '../Shared/Loading';
 import './CustomerReview.css'
 
 const CustomerReview = () => {
@@ -10,6 +11,8 @@ const CustomerReview = () => {
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[]);
+
+    if( !reviews.length ){ return <Loading/>}
 
     return (
         <div className='m-3 p-3'>

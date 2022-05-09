@@ -4,6 +4,7 @@ import { faInfo, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './ManageInventories.css'
 import { useNavigate } from "react-router-dom";
+import Loading from "../Shared/Loading";
 
 const ManageInventories = () => {
   const [products, setProducts] = useState([]);
@@ -22,6 +23,8 @@ const ManageInventories = () => {
   const details=(id)=>{
     navigate(`/product/${id}`)
   }
+
+  if( !products.length ){ return <Loading/>}
 
   const productDelete = (id) =>{
 
