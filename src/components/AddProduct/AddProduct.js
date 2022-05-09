@@ -4,10 +4,13 @@ import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddProduct = () => {
   const [product, setProduct] = useState({});
   const [user, loading, error] = useAuthState(auth);
+  const notify = () => toast("Product Added!");
 
   if (loading) {
     return <Loading />;
@@ -18,6 +21,7 @@ const AddProduct = () => {
 
   const addProduct = (e) => {
     e.preventDefault();
+    
     const name = e.target.name.value;
     const category = e.target.category.value;
     const description = e.target.description.value;
@@ -41,9 +45,7 @@ const AddProduct = () => {
       email,
     };
     setProduct(newProduct);
-
-    console.log(product);
-    if (product.name) {
+    
       const url = "https://fathomless-dawn-99199.herokuapp.com/product";
       fetch(url, {
         method: "POST",
@@ -55,14 +57,14 @@ const AddProduct = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data) {
-            alert("Your product have been added.");
+            notify();
           }
         });
-    }
   };
   return (
     <div>
       <div className="col-md-4  mx-auto">
+        <ToastContainer/>
         <h1 className="mt-5 mb-3">Add Product</h1>
         <form className="mx-auto my-3 row" onSubmit={addProduct}>
           <div className="mb-3">

@@ -18,8 +18,9 @@ const ProductDetails = () => {
 
     if( !product._id ){ return <Loading/>}
 
-    const quantityUpdate = e =>{
+    const quantityUpdate = (e) =>{
         e.preventDefault();
+
         const addedQuantity = parseInt(e.target.quantity.value);
         if(addedQuantity<1 || !addedQuantity){
             return;
@@ -45,7 +46,6 @@ const ProductDetails = () => {
     }
 
     const deliveredProduct = (e) =>{
-        e.preventDefault();
         const quantity = parseInt(product.quantity)-1;
         if(quantity<1){
             return;
