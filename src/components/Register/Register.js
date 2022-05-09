@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -26,7 +26,7 @@ const Register = () => {
         const email =e.target.email.value;
         const password =e.target.password.value;
         const cpass =e.target.cpass.value;
-        createUserWithEmailAndPassword(email,password);
+
         // setEmail(em);
         // console.log(em);
         // console.log(ps);
@@ -54,14 +54,16 @@ const Register = () => {
         setErrorMsg(allError);
         
         if(errorMsg.name || errorMsg.email || errorMsg.password){
-            console.log("inside");
-            console.log("email:",email,", pass:",password,", cpass:", cpass);
-            console.log(errorMsg);
+            // console.log("inside");
+            // console.log("email:",email,", pass:",password,", cpass:", cpass);
+            // console.log(errorMsg);
             return;
         }
+        
+        createUserWithEmailAndPassword(email,password);
 
         // createUserWithEmailAndPassword(email,password);
-        console.log(email,password);
+        // console.log(email,password);
 
         if(error){
             const firebaseError = error.message;

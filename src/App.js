@@ -48,7 +48,7 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/resetPassword" element={<ResetPassword/>}></Route>
-        <Route path="/loading" element={<Loading/>}></Route>
+        {/* <Route path="/loading" element={<Loading/>}></Route> */}
         <Route path="*" element={<NotFound/>}></Route>
       </Routes>
       <Footer/>

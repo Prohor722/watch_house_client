@@ -6,16 +6,16 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ResetPassword = () => {
-  const [email, setEmail] = useState("");
-  const [errorMsg, setErrorMsg] = useState({});
+  
   const [sendPasswordResetEmail, sending, error] =
     useSendPasswordResetEmail(auth);
+
   const sendingMail = () => toast("Reset is Sending...",{autoClose: 2000});
-  const sendingError = () => toast("Please try again...", {type: toast.TYPE.ERROR, autoClose: 2000});
+  const sendingError = () => toast("Please try again or check mail address carefully.", {type: toast.TYPE.ERROR, autoClose: 4000});
 
   const handleReset = (e) => {
     e.preventDefault();
-    setEmail(e.target.email.value);
+    const email = e.target.email.value;
 
     sendPasswordResetEmail(email);
   };
@@ -51,6 +51,9 @@ const ResetPassword = () => {
             Reset
           </button>
         </form>
+
+        {error && <div className="alert alert-danger">{error.message}</div>}
+
         <div className="d-flex justify-content-center mt-2"></div>
       </div>
     </div>

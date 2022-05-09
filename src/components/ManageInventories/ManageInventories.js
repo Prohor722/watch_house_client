@@ -50,7 +50,7 @@ const ManageInventories = () => {
         <button className="btn btn-dark ms-auto" onClick={()=>navigate('/addProduct')}>Add <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
       </div>
       <hr />
-      <table className="table">
+      <table className="table table-hover">
         <thead>
           <tr>
             <th scope="col">Image</th>

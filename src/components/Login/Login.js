@@ -23,14 +23,16 @@ const Login = () => {
         navigate(from, {replace: true});
     }
 
-    const handleLogin = e =>{
+    const handleLogin = async e =>{
         e.preventDefault();
         // setEmail(e.target.email.value);
-        const mail = e.target.email.value;
         // setPassword(e.target.password.value);
+        
+        const mail = e.target.email.value;
         const pass = e.target.password.value;
 
-        signInWithEmailAndPassword(mail,pass);
+        // console.log(email, password);
+        await signInWithEmailAndPassword(mail,pass);
         // const url ="https://fathomless-dawn-99199.herokuapp.com/login"
         // fetch(url,{
         //     method: "POST",
