@@ -7,7 +7,7 @@ const CustomerReview = () => {
     const [reviews, setReviews] = useState([]);
     
     useEffect(()=>{
-        fetch('https://fathomless-dawn-99199.herokuapp.com/reviews')
+        fetch('https://watchhouseserver-production.up.railway.app/reviews')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[]);

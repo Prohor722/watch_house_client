@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     fetch(
-      `https://fathomless-dawn-99199.herokuapp.com/products?size=${numberOfProducts}`
+      `https://watchhouseserver-production.up.railway.app/products?size=${numberOfProducts}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));
@@ -24,7 +24,7 @@ const Home = () => {
 
   useEffect(() => {
     fetch(
-      `https://fathomless-dawn-99199.herokuapp.com/reviews?size=${numberOfReviews}`
+      `https://watchhouseserver-production.up.railway.app/reviews?size=${numberOfReviews}`
     )
       .then((res) => res.json())
       .then((data) => setReviews(data));

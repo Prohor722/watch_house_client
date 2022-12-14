@@ -11,7 +11,7 @@ const ManageInventories = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://fathomless-dawn-99199.herokuapp.com/products",{
+    fetch("https://watchhouseserver-production.up.railway.app/products",{
       headers: {
         authorization: `Bearer ${localStorage.getItem('accessToken')}`
       }
@@ -30,7 +30,7 @@ const ManageInventories = () => {
 
         const proceed = window.confirm("Are you sure?");
         if(proceed){
-            const url = `https://fathomless-dawn-99199.herokuapp.com/product/${id}`;
+            const url = `https://watchhouseserver-production.up.railway.app/product/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

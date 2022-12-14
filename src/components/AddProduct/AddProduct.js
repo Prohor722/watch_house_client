@@ -46,7 +46,7 @@ const AddProduct = () => {
     };
     setProduct(newProduct);
     
-      const url = "https://fathomless-dawn-99199.herokuapp.com/product";
+      const url = "https://watchhouseserver-production.up.railway.app/product";
       fetch(url, {
         method: "POST",
         headers: {
