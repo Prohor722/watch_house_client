@@ -7,7 +7,7 @@ const CustomerReview = () => {
     const [reviews, setReviews] = useState([]);
     
     useEffect(()=>{
-        fetch('https://watchhouseserver-production.up.railway.app/reviews')
+        fetch('https://watch-house-server-prohor722.vercel.app/reviews')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[]);

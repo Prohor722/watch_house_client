@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [qunt, setQuant] = useState(0);
 
     useEffect(()=>{
-        fetch(`https://watchhouseserver-production.up.railway.app/product/${id}`)
+        fetch(`https://watch-house-server-prohor722.vercel.app/product/${id}`)
         .then(res=>res.json())
         .then(data=>{
             setProduct(data);
@@ -27,7 +27,7 @@ const ProductDetails = () => {
         }
         const quantity = parseInt(product.quantity)+addedQuantity;
 
-        const url =`https://watchhouseserver-production.up.railway.app/product/${id}`;
+        const url =`https://watch-house-server-prohor722.vercel.app/product/${id}`;
         fetch(url,{
             method: 'PUT',
             headers:{
@@ -51,7 +51,7 @@ const ProductDetails = () => {
             return;
         }
         
-        const url =`https://watchhouseserver-production.up.railway.app/product/${id}`;
+        const url =`https://watch-house-server-prohor722.vercel.app/product/${id}`;
         fetch(url,{
             method: 'PUT',
             headers:{

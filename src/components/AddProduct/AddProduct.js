@@ -46,7 +46,7 @@ const AddProduct = () => {
     };
     setProduct(newProduct);
     
-      const url = "https://watchhouseserver-production.up.railway.app/product";
+      const url = "https://watch-house-server-prohor722.vercel.app/product";
       fetch(url, {
         method: "POST",
         headers: {
