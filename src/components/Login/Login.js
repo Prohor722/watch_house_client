@@ -33,7 +33,7 @@ const Login = () => {
 
         // console.log(email, password);
         await signInWithEmailAndPassword(mail,pass);
-        // const url ="https://watch-house-server-prohor722.vercel.app/login"
+        // const url ="https://watch-house-server.onrender.com/login"
         // fetch(url,{
         //     method: "POST",
         //     headers: {

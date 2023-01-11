@@ -17,13 +17,13 @@ const Home = () => {
 
   useEffect(() => {
     fetch(
-      `https://watch-house-server-prohor722.vercel.app/products?size=${numberOfProducts}`
+      `https://watch-house-server.onrender.com/products?size=${numberOfProducts}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));
 
     fetch(
-      `https://watch-house-server-prohor722.vercel.app/reviews?size=${numberOfReviews}`
+      `https://watch-house-server.onrender.com/reviews?size=${numberOfReviews}`
     )
       .then((res) => res.json())
       .then((data) => setReviews(data));

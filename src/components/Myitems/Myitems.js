@@ -13,7 +13,7 @@ const Myitems = () => {
 
   useEffect(() => {
     fetch(
-      `https://watch-house-server-prohor722.vercel.app/products/?email=${user.email}`
+      `https://watch-house-server.onrender.com/products/?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));
@@ -41,7 +41,7 @@ const Myitems = () => {
   const productDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://watch-house-server-prohor722.vercel.app/product/${id}`;
+      const url = `https://watch-house-server.onrender.com/product/${id}`;
       fetch(url, {
         method: "DELETE",
       })

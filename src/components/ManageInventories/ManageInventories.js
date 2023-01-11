@@ -11,7 +11,7 @@ const ManageInventories = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://watch-house-server-prohor722.vercel.app/products",{
+    fetch("https://watch-house-server.onrender.com/products",{
       headers: {
         authorization: `Bearer ${localStorage.getItem('accessToken')}`
       }
@@ -30,7 +30,7 @@ const ManageInventories = () => {
 
         const proceed = window.confirm("Are you sure?");
         if(proceed){
-            const url = `https://watch-house-server-prohor722.vercel.app/product/${id}`;
+            const url = `https://watch-house-server.onrender.com/product/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

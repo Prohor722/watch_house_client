@@ -46,7 +46,7 @@ const AddProduct = () => {
     };
     setProduct(newProduct);
     
-      const url = "https://watch-house-server-prohor722.vercel.app/product";
+      const url = "https://watch-house-server.onrender.com/product";
       fetch(url, {
         method: "POST",
         headers: {
