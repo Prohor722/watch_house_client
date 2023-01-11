@@ -11,6 +11,7 @@ import Loading from "../Shared/Loading";
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [refresh , setRefresh] = useState(false);
   const numberOfProducts = 6;
   const numberOfReviews = 3;
 
@@ -26,11 +27,10 @@ const Home = () => {
     )
       .then((res) => res.json())
       .then((data) => setReviews(data));
-  }, []);
+  }, [refresh]);
 
-  // useEffect(() => {
-    
-  // }, []);
+  console.log('products: ',products);
+  console.log('reviews: ',reviews);
 
   
   if( !products.length || !reviews.length ){ return <Loading/>}
